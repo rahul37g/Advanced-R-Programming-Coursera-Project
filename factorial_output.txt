@@ -1,0 +1,18 @@
+PART 1: Performance and comparison of specific input values across factorial functions 
+
+Unit: microseconds
+                     expr   min     lq    mean median     uq    max neval cld
+   tmp %>% Factorial_loop  38.8  42.25  61.287  48.10  64.10  197.6   100 a  
+ tmp %>% Factorial_reduce 455.9 472.75 718.830 578.30 976.35 1798.3   100   c
+   tmp %>% Factorial_func  68.8  75.05 121.362  93.60 169.30  267.5   100  b 
+    tmp %>% Factorial_mem  37.4  42.60  66.906  51.65  76.00  195.6   100 ab 
+
+
+ PART 2: Performance and comparison of larger input values across factorial functions 
+
+Unit: microseconds
+                      expr    min      lq     mean median      uq    max neval cld
+   1000 %>% Factorial_loop   61.0   70.40  105.823   92.0  129.25  308.9   100 a  
+ 1000 %>% Factorial_reduce 2854.3 3025.15 3411.877 3181.2 3544.00 5519.8   100   c
+   1000 %>% Factorial_func  653.1  822.60  978.785  898.2 1029.05 4899.4   100  b 
+    1000 %>% Factorial_mem   38.3   49.30  108.488   74.2  114.65 2485.9   100 a  
